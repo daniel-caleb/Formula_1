@@ -41,63 +41,60 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         //Set text on text view
         holder.textView.setText(arrayList.get(position));
 
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Get clicked item position
-                int position = holder.getAdapterPosition();
-                //Check Condition
-                switch (position){
-                    case 0:
-                        //When position is equal to 0
-                        //Redirect to homepage
-                        activity.startActivity(new Intent(activity,MainActivity.class)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                        break;
+        holder.textView.setOnClickListener(v -> {
+            //Get clicked item position
+            int position1 = holder.getAdapterPosition();
+            //Check Condition
+            switch (position1){
+                case 0:
+                    //When position is equal to 0
+                    //Redirect to homepage
+                    activity.startActivity(new Intent(activity,MainActivity.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    break;
 
-                    case 1:
-                        //When position is equal to 1
-                        //Redirect to Dashboard page
-                        activity.startActivity(new Intent(activity,Dashboard.class)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                        break;
+                case 1:
+                    //When position is equal to 1
+                    //Redirect to Dashboard page
+                    activity.startActivity(new Intent(activity,Dashboard.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    break;
 
-                    case 2:
-                        //When position is equal to 1
-                        //Redirect to Dashboard page
-                        activity.startActivity(new Intent(activity,About.class)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                        break;
-                    case 3:
-                        //When position is equal to 1
-                        //Redirect to Dashboard page
-                        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                                //SetTitle
-                        builder.setTitle("Logout");
-                        //Set Message
-                        builder.setMessage("Are you sure you want to Logout?");
-                        //Positive Yes Button
-                        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //Finnish all
-                            activity.finishAffinity();
-                            //Exit App
-                            System.exit(0);
-                        }
-                    });
-                        //Negative Cancel
-                        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //Dismiss Dialog
-                            dialog.dismiss();
-                        }
-                    });
-                        //Show Dialog
-                        builder.show();
-                        break;
-                }
+                case 2:
+                    //When position is equal to 1
+                    //Redirect to Dashboard page
+                    activity.startActivity(new Intent(activity,About.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    break;
+                case 3:
+                    //When position is equal to 1
+                    //Redirect to Dashboard page
+                    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                            //SetTitle
+                    builder.setTitle("Logout");
+                    //Set Message
+                    builder.setMessage("Are you sure you want to Logout?");
+                    //Positive Yes Button
+                    builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Finnish all
+                        activity.finishAffinity();
+                        //Exit App
+                        System.exit(0);
+                    }
+                });
+                    //Negative Cancel
+                    builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Dismiss Dialog
+                        dialog.dismiss();
+                    }
+                });
+                    //Show Dialog
+                    builder.show();
+                    break;
             }
         });
 
@@ -109,7 +106,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         return arrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         //Initialize Variables
         TextView textView;
 

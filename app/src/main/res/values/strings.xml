@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">F1</string>
+
+    <string name="signup">Sign Up and Be Part of Us Today?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="passwordhint">Confirm Password</string>
+    <string name="forgotpassword">FORGOT PASSWORD</string>
+    <string name="btnlogin">LOGIN</string>
+    <string name="btnsignup">SIGN UP</string>
+    
+    
 </resources>

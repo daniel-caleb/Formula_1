@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/text_view"
     android:padding="12dp"
-    android:fontFamily="@font/titillium_web_semibold"
-    android:background="?selectableItemBackground">
+    android:textColor="@color/Dark"
+    android:fontFamily="@font/titillium_web_semibold">
 
 </TextView>

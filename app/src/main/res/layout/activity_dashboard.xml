@@ -15,15 +15,6 @@
         <include
             layout="@layout/main_toolbar"/>
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:fontFamily="@font/titillium_web_semibold"-->
-<!--            android:gravity="center"-->
-<!--            android:text="The Paddock Club!  DashBoard"-->
-<!--            android:textSize="50sp"-->
-<!--            android:textStyle="bold" />-->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
