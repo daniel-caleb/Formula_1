@@ -53,108 +53,60 @@
         android:transitionName="trans_tag"/>
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/inputFullName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="@string/email"
         android:fontFamily="@font/titillium_web_semibold"
+        android:hint="Full Name"
         android:inputType="text"
         android:minHeight="48dp"
         android:padding="16dp"
+        android:transitionName="trans_email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        android:transitionName="trans_email"/>
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/confPassword"
+        android:id="@+id/inputEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
-        android:drawableStart="@drawable/ic_lock"
+        android:drawableStart="@drawable/ic_email"
         android:drawablePadding="16dp"
         android:ems="10"
         android:fontFamily="@font/titillium_web_semibold"
-        android:inputType="textPassword"
+        android:hint="@string/email"
+        android:inputType="text"
+        android:minHeight="48dp"
         android:padding="16dp"
-        android:hint="@string/passwordhint"
-        android:transitionName="trans_pass"
+        android:transitionName="trans_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/titillium_web_semibold"
-        android:text="Already Have an Account? Login"
-        android:textColor="#212121"
-        android:textSize="20sp"
-        android:backgroundTint="@color/red"
-        android:transitionName="trans_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/signup_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/red"
-        android:text="@string/btnsignup"
-        android:transitionName="trans_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confPassword">
-
-    </Button>
-
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/titillium_web_semibold"
-        android:text="@string/forgotpassword"
-        android:textColor="@color/red"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:transitionName="trans_forgot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_screen" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFullName" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         android:transitionName="trans_signup_options"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -181,23 +133,84 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/signup_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/btnsignup"
+        android:transitionName="trans_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confPassword">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/titillium_web_semibold"
+        android:text="Already Have an Account? Login"
+        android:textColor="#212121"
+        android:textSize="15sp"
+        android:transitionName="trans_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/confPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:fontFamily="@font/titillium_web_semibold"
+        android:hint="@string/passwordhint"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:transitionName="trans_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="OR"
-        android:textSize="15sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/titillium_web_semibold"
+        android:text="@string/forgotpassword"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:transitionName="trans_forgot"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_screen" />
 
     <EditText
         android:id="@+id/inputPassword"
-        android:layout_width="344dp"
-        android:layout_height="56dp"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_lock"
@@ -208,9 +221,19 @@
         android:inputType="textPassword"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail">
-    </EditText>
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"></EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="OR"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

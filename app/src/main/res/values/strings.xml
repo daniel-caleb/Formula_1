@@ -8,6 +8,9 @@
     <string name="forgotpassword">FORGOT PASSWORD</string>
     <string name="btnlogin">LOGIN</string>
     <string name="btnsignup">SIGN UP</string>
-    
-    
+    <string name="tagline">The F1 FORMULA 1 logo, F1, Formula 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing BV, a formula 1 company. All rights reserved.</string>
+    <string name="powered_by_salesforce">Powered by Salesforce</string>
+    <string name="formula_one_motorsport_championship">Formula One Motorsport Championship</string>
+
+
 </resources>

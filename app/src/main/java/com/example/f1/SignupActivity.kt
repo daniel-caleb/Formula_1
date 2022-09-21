@@ -16,12 +16,11 @@ import com.google.firebase.ktx.Firebase
 class SignupActivity : AppCompatActivity() {
 
     //Declaring Variables
-
+    lateinit var  etFullName: EditText
     lateinit var etEmail: EditText
     lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
-
     private lateinit var forgotpassword: ImageView
 
     // create Firebase authentication object
@@ -64,28 +63,37 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun signUpUser() {
-        val email = etEmail.text.toString()
-        val pass = etPass.text.toString()
-        val confirmPassword = etConfPass.text.toString()
+        val FullName = this.etFullName.text.toString()
+        val email = this.etEmail.text.toString()
+        val pass = this.etPass.text.toString()
+        val confirmPassword = this.etConfPass.text.toString()
 
         // check pass
+
+        if (FullName.isBlank()) {
+            etFullName.setError("Full Name is required!")
+            etFullName.requestFocus()
+            return
+        }
+
         if (email.isBlank() || pass.isBlank() || confirmPassword.isBlank()) {
-            Toast.makeText(this, "Email and Password can't be blank", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Email and Password can't be blank", Toast.LENGTH_LONG).show()
             return
         }
 
         if (pass != confirmPassword) {
-            Toast.makeText(this, "Password and Confirm Password do not match", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Password and Confirm Password do not match", Toast.LENGTH_LONG)
                 .show()
             return
         }
+
         // If all credential are correct
         // We call createUserWithEmailAndPassword
         // using auth object and pass the
         // email and pass in it.
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Successfully Signed Up", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
                 Toast.makeText(this, "Signed Up Failed!", Toast.LENGTH_SHORT).show()
