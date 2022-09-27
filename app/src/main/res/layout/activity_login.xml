@@ -83,7 +83,7 @@
         android:backgroundTint="@color/red"
         android:fontFamily="@font/titillium_web_semibold"
         android:text="@string/btnlogin"
-        android:textColor="#212121"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:transitionName="trans_login"
         app:layout_constraintEnd_toEndOf="parent"

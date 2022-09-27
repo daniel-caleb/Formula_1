@@ -18,6 +18,7 @@
 
 
         <ScrollView
+            android:id="@+id/part1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -52,10 +53,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
-                        android:background="#3E323030"
+                        android:background="#BCFFFFFF"
                         android:fontFamily="@font/titillium_web_semibold"
                         android:text="Ferrari Talks"
-                        android:textColor="@color/white"
+                        android:textColor="@color/Dark"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -63,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:background="#2FFFFFFF"
+                        android:background="#BCFFFFFF"
                         android:fontFamily="@font/titillium_web_semibold"
                         android:text="Herta’s F1 chances and the Tifosi in full voice ahead of the Italian GP"
                         android:textColor="@color/black"
@@ -101,7 +102,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
-                            android:background="#68FFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="Zandvoort proved Williams can now compete on different style circuits."
                             android:textColor="@color/black"
@@ -140,7 +141,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:background="#68FFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="'It’s a dream come true' – What racing in red at Monza means to Ferrari’s."
                             android:textColor="@color/black"
@@ -168,7 +169,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
-                            android:background="#2FFFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="Jolyon Palmer:"
                             android:textColor="@color/black"
@@ -179,7 +180,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:background="#2FFFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="Could Hamilton have won the Dutch Grand Prix with a different strategy?"
                             android:textColor="@color/black"
@@ -207,9 +208,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
-                            android:background="#2FFFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
-                            android:text="Horner Speaks"
+                            android:text="Christian Horner Speaks"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -218,7 +219,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:background="#2FFFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="Horner addresses Gasly reports as Colton Herta is linked with AlphaTauri"
                             android:textColor="@color/black"
@@ -283,9 +284,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
-                            android:text="Mercedes Petronas"
-                            android:textColor="@color/white"
+                            android:text="Mercedes Petronas-Lewis Hamilton"
+                            android:textColor="@color/Dark"
                             android:textSize="30sp"
                             android:textStyle="bold" />
 
@@ -293,7 +295,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:background="#68FFFFFF"
+                            android:background="#BCFFFFFF"
                             android:fontFamily="@font/titillium_web_semibold"
                             android:text="Hamilton and Russell hope to fight Ferrari and Red Bull on Sunday after ‘unfortunate’ end to Zandvoort qualifying."
                             android:textColor="@color/black"

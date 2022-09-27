@@ -66,6 +66,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                     activity.startActivity(new Intent(activity,About.class)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                     break;
+
                 case 3:
                     //When position is equal to 1
                     //Redirect to Dashboard page

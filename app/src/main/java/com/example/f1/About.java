@@ -6,8 +6,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class About extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class About extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
+    Button date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class About extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         btMenu=findViewById(R.id.bt_menu);
         recyclerView=findViewById(R.id.recycler_view);
+        date=findViewById(R.id.date);
 
         //Set Layout Manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

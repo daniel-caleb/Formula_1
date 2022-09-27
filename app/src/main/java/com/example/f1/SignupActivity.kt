@@ -16,9 +16,9 @@ import com.google.firebase.ktx.Firebase
 class SignupActivity : AppCompatActivity() {
 
     //Declaring Variables
-    lateinit var  etFullName: EditText
-    lateinit var etEmail: EditText
-    lateinit var etConfPass: EditText
+    private lateinit var  fullName: EditText
+    private lateinit var etEmail: EditText
+    private lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
     private lateinit var forgotpassword: ImageView
@@ -35,23 +35,19 @@ class SignupActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_signup)
 
-
         // View Bindings
-        etEmail = findViewById(R.id.inputEmail)
-        etConfPass = findViewById(R.id.confPassword)
-        etPass = findViewById(R.id.inputPassword)
-        btnSignUp = findViewById(R.id.signup_screen)
-
         //Binding od the variables by their 'id'
+        fullName = findViewById(R.id.inputFullName)
+        etEmail = findViewById(R.id.SinputEmail)
+        etConfPass = findViewById(R.id.SconfPassword)
+        etPass = findViewById(R.id.SinputPassword)
+        btnSignUp = findViewById(R.id.signup_screen)
         forgotpassword = findViewById(R.id.googleLogin)
 
 
         // Initialising auth object
         auth = Firebase.auth
-
-        btnSignUp.setOnClickListener {
-            signUpUser()
-        }
+        btnSignUp.setOnClickListener { this.signUpUser() }
 
         //Giving function to the declared variable
         forgotpassword.setOnClickListener {
@@ -63,16 +59,16 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun signUpUser() {
-        val FullName = this.etFullName.text.toString()
-        val email = this.etEmail.text.toString()
-        val pass = this.etPass.text.toString()
-        val confirmPassword = this.etConfPass.text.toString()
+        val name: String = fullName.text.toString()
+        val email: String = etEmail.text.toString()
+        val pass = etPass.text.toString()
+        val confirmPassword = etConfPass.text.toString()
 
         // check pass
 
-        if (FullName.isBlank()) {
-            etFullName.setError("Full Name is required!")
-            etFullName.requestFocus()
+        if (name.isBlank()) {
+            fullName.error = "Full Name is required!"
+            fullName.requestFocus()
             return
         }
 
@@ -93,8 +89,9 @@ class SignupActivity : AppCompatActivity() {
         // email and pass in it.
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                Toast.makeText(this, "Successfully Signed Up", Toast.LENGTH_SHORT).show()
-                finish()
+                Toast.makeText(this,"Signed Successfully", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Signed Up Failed!", Toast.LENGTH_SHORT).show()
             }
