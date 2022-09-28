@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
 
         }
         forgotpassword.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
             finish()
 
@@ -62,6 +62,12 @@ class LoginActivity : AppCompatActivity() {
     private fun login(){
         val email = etEmail.text.toString()
         val pass = etPass.text.toString()
+        // check pass
+
+        if (email.isBlank() || pass.isBlank()) {
+            Toast.makeText(this, "Email and Password can't be blank", Toast.LENGTH_LONG).show()
+            return
+        }
         //Calling signIn with Email and Password i.e email, pass
         //Function using Firebase auth object
         //On successful response Display a Toast Message

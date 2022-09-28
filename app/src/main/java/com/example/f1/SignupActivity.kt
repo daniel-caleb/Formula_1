@@ -5,10 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -21,7 +18,8 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
-    private lateinit var forgotpassword: ImageView
+    private lateinit var btnLogin: Button
+    private lateinit var forgotpassword: TextView
 
     // create Firebase authentication object
     private lateinit var auth: FirebaseAuth
@@ -42,7 +40,8 @@ class SignupActivity : AppCompatActivity() {
         etConfPass = findViewById(R.id.SconfPassword)
         etPass = findViewById(R.id.SinputPassword)
         btnSignUp = findViewById(R.id.signup_screen)
-        forgotpassword = findViewById(R.id.googleLogin)
+        btnLogin = findViewById(R.id.btnLogin)
+        forgotpassword = findViewById(R.id.forgotPassword)
 
 
         // Initialising auth object
@@ -56,7 +55,13 @@ class SignupActivity : AppCompatActivity() {
             //Use finish the end of the activity
             finish()
         }
-    }
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            //Use finish the end of the activity
+            finish()
+        }
+        }
 
     private fun signUpUser() {
         val name: String = fullName.text.toString()

@@ -32,11 +32,9 @@ public class SplashscreenActivity extends AppCompatActivity {
 
         //Hooks
         imageView = findViewById(R.id.imageView);
-        logo = findViewById(R.id.logo);
         slogan = findViewById(R.id.textView2);
 
         imageView.setAnimation(topAnim);
-        logo.setAnimation(bottomAnim);
         slogan.setAnimation(bottomAnim);
 
         int SPLASH_SCREEN = 5000;
