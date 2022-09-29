@@ -41,7 +41,6 @@ class SignupActivity : AppCompatActivity() {
         etPass = findViewById(R.id.SinputPassword)
         btnSignUp = findViewById(R.id.signup_screen)
         btnLogin = findViewById(R.id.btnLogin)
-        forgotpassword = findViewById(R.id.forgotPassword)
 
 
         // Initialising auth object
@@ -49,12 +48,6 @@ class SignupActivity : AppCompatActivity() {
         btnSignUp.setOnClickListener { this.signUpUser() }
 
         //Giving function to the declared variable
-        forgotpassword.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            //Use finish the end of the activity
-            finish()
-        }
         btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
